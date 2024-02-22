@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>SignUp Page</title>
@@ -14,48 +12,70 @@
     <form id="signupForm" method="post">
         <h2>SignUp Portal</h2>
 
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
 
-        
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+        </div>
 
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
 
-        <label for="birthdate">Date of Birth:</label>
-        <input type="date" id="birthdate" name="birthdate" required>
+        <div class="form-group">
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
 
-        <label for="address">Address:</label>
-        <input type="address" name="address" rows="4" required></textarea>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+        </div>
 
-        <label for="officeContact">Office Contact:</label>
-        <input type="tel" id="officeContact" name="officeContact" pattern="[0-9]{10}" required>
+        <div class="form-group">
+            <label for="officeContact">Office Contact:</label>
+            <input type="tel" id="officeContact" name="officeContact" pattern="[0-9]{10}" required>
+        </div>
 
-        <label for="signupPassword">Password:</label>
-        <input type="password" id="signupPassword" name="signupPassword" required>
+        <div class="form-group">
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+        </div>
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
 
-        <label for="agreeTerms">
-            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-            I agree to the Terms and Conditions
-        </label>
+        <div class="form-group">
+            <label for="agreeTerms">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                I agree to the Terms and Conditions
+            </label>
+        </div>
 
         <button type="button" onclick="validateSignUp()">Submit</button>
-        
     </form>
 </div>
 
 <script src="script.js"></script>
+<script>
+  document.getElementById("signupForm").addEventListener("submit", validateSignUp);
+</script>
+
 </body>
 </html>
