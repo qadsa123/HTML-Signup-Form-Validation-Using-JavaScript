@@ -41,7 +41,6 @@ function validateSignUp() {
     errorMessage += "Please enter your birthdate.\n";
   }
 
-  // Address validation (add your desired format or length check here)
   if (address === "") {
     errorMessage += "Please enter your address.\n";
   }
